@@ -20,9 +20,9 @@ Cechy Windows Terminal:
 
 ## Moja konfiguracja Windows Terminal
 
-### 0. Git Bash
+### 0. Git Bash oraz Git
 
-Dla mnie totalny must have. Jeżeli instalowałeś już Git to zapewne masz go na swoim komputerze, jeżeli jednak nie to pobierz go ze strony Git'a (wraz z systemem Git): [Git](https://git-scm.com/)
+Dla mnie totalny must have. Jeżeli nie masz ich zainstalowanych to pobierz Gita z oficjalnej strony: [Git](https://git-scm.com/)
 
 Lub poprzez powershell:
 
@@ -54,9 +54,19 @@ iwr -useb get.scoop.sh | iex
 scoop install lsd
 ```
 
-### 4. Stwórz plik .bashrc
+### 4. Widnows Powerline
 
-W katalogu ***`C:\Users\<USER-NAME>`*** (wstaw swoją nazwę użytkownika) stwórz plik o dokładnie takiej nazwie ***.bashrc***
+Dla schludniejszego wyglądu używamy Windows Powerlines. Otwórz swojego git bash, a następnie wykonaj następujące polecenia:
+
+```bash
+cd $HOME
+mkdir -p .bash/themes/git_bash_windows_powerline
+git clone https://github.com/diesire/git_bash_windows_powerline.git .bash/themes/git_bash_windows_powerline
+```
+
+### 5. Stwórz plik .bashrc
+
+W katalogu ***`C:\Users\<USER-NAME>`*** (wstaw swoją nazwę użytkownika) stwórz plik o dokładnie takiej nazwie ***.bashrc*** (chyba, że takowy już istnieje).
 
 Następnie wklej do niego tą zawartość:
 
@@ -71,7 +81,7 @@ unset THEME
 alias ls="lsd"
 ```
 
-### 5. (Opcjonalnie) Podmień plik ustawień z Windows Terminal
+### 6. (Opcjonalnie) Podmień plik ustawień z Windows Terminal
 
 Aby dostać się do ustawień klikamy skrót klawiszowy `ctrl + ,` a następnie na samym dole z lewej strony klikamy przycisk `Open JSON file`.
 
@@ -247,3 +257,9 @@ Poniżej udostępniam mój plik `settings.json` z motywami oraz skrótami klawis
 ## Widok mojej konfiguracji
 
 ![alt text](/assets/img/my_windows_terminal_look.png)
+
+## Skąd wziąć motywy?
+
+Możesz stworzyć swój własny lub skorzystać z gotowców:
+
+[windowsterminalthemes.dev](https://windowsterminalthemes.dev/)
